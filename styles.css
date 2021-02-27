@@ -1,0 +1,79 @@
+#score { text-align: center; }
+
+#game {
+  width: 600px;
+  height: 300px;
+  border: 2px solid black;
+  margin: auto;
+  background-image: url("");
+  background-size:  cover;
+  background-color: rgb(245, 245, 245);
+  background-image: url();
+}
+
+#dino {
+  height: 50px;
+  width: 80px;
+  top: 250px;
+  left: 20px;
+  position: relative;
+  background-image: url("https://www.fatbeam.com/wp-content/uploads/2019/05/Internet-dinosaur.jpg");
+  background-size: cover;
+  background-color: black;
+}
+
+#rock {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  top: 200px;
+  left: 550px;
+  background-image: url("https://cdn.elgoog.im/t-rex/img/2x-obstacle-large.png"); 
+  background-size:cover;
+  animation: rock 1.33s infinite;
+  background-color: rgb(250, 250, 250);
+}
+
+@keyframes rock {
+  0%{left: 550px;}
+  100%{left: -50px;}
+} 
+
+.jump-animation {
+  animation: jump 0.5s;
+}
+
+@keyframes jump {
+  0%{top: 225px;}
+  50%{top: 75px;}
+  75%{top: 75px;}
+  100%{top: 225px;}
+}
+.score{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.cloud{
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  background-position-x: 0;
+  background-position-y: 0;
+  font-size: 50px;
+  margin-left: 620px;
+}
+.line{
+  width: 600px;
+  height: 300px;
+  background-color: rgb(255, 255, 255);
+  margin-top: 20px;
+}
+
+.card-btn{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.write-it{
+  font-size: 20px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.card-btn2{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin-left: 50px;
+}
