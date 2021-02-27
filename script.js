@@ -1,35 +1,45 @@
-const dino = document.getElementById("dino");
-const rock = document.getElementById("rock");
-const score = document.getElementById("score");
+ class calculator{
+     consructer(previousoperandtextelement,currentoperandtextelement){
+         this.previousoperandtextelement = previousoperandtextelement
+         this.currentoperandtextelement = currentoperandtextelement
+         this.clear()
+     }
+  clear() {
+this.currentoperand = ''
+this.previousoperand = ''
+this.operation = undifined
+  }
+     
+delete() {
 
-function jump() {
-  dino.classList.add("jump-animation");
-  setTimeout(() =>
-    dino.classList.remove("jump-animation"), 500);
 }
+appendnumber(number) {
+this.currentoperand = number
+}
+ }
 
-document.addEventListener('keypress', (event) => {
-  if (!dino.classList.contains('jump-animation')) {
-    jump();
-  }
+chooseoperation(operation) {
+
+}
+Compute() {
+
+}
+updatedisplay() {
+this.currentoperandtextelement.innertext = this.currentoperand
+}
+const numberbuttons = document.queryselectorall([data-number],)
+const operationbuttons = document.queryselectorall([data-operation],)
+const equalsbutton = document.queryselector('data-equals')
+const deletebutton = document.queryselector('data-delete')
+const allclearbutton = document.queryselector('data-all-clear')
+const previousoperandtextelement = document.queryselector('data-previous-operand')
+const currentoperandtextelement = document.queryselector('data-current-opperant')
+
+const calculator = new calculator(previousoperandtextelement,currentoperandtextelement)
+
+numberbuttons.foreach(button=>{
+    button.addeventlistener('click', () =>{
+        calculator.appendnumber(button.innertext)
+        calculator.updatedisplay()
+    })
 })
-
-setInterval(() => {
-  const dinoTop = parseInt(window.getComputedStyle(dino)
-    .getPropertyValue('top'));
-  const rockLeft = parseInt(window.getComputedStyle(rock)
-    .getPropertyValue('left'));
-  score.innerText++;
-
-  if (rockLeft < 0) {
-    rock.style.display = 'none';
-  } else {
-    rock.style.display = ''
-  }
-
-  if (rockLeft < 50 && rockLeft > 0 && dinoTop > 150) {
-    alert("You got a score of: " + score.innerText +
-      "\n\npress space to play again or click ok");
-    location.reload();
-  }
-}, 50);
