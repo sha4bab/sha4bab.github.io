@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>meet</title>
+        <script src="https//meet.jit.si/external api.js"></script>
+        <html>
+            <head>
+                <title>meeting</title>
+                <script src="https://meet.jit.si/external_api.js"></script>
+                <link href="styles.css" rel="stylesheet">
+                
+            </head>
+            <body>
+                <button class="start" id="start" type="start"> make a meeting</button>
+                <div id="jitsi-container"></div>
+                <script>
+                    var button = document.querySelector('#start');
+                    var container = document.querySelector('#jitsi-container');
+                    var api = null;
+        
+                    button.addEventListener('click', () => {
+                        var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+                        var stringLength = 30;
+                        function pickRandom () {
+                            return possible[Math.floor() * possible.length];
+                        }
+                        var randomString = Array.apply(null,Array(stringLength)).map (pickRandom).join('');
+        
+                        var domain = "meet.jit.si";
+                        var options = {
+                            "roomName": randomString,
+                            "parentNode": container,
+                            "width": 1400,
+                            "height": 700,
+                            
+                        };
+                        api = new JitsiMeetExternalAPI(domain, options);
+                     });
+                </script>
+                
+             
+             </div> 
+             <button class="note" onclick="revealmessage()">fullscreen</button>
+             <p id="hiddenmessage" style="display:none">when you enter the meeting for fullscreen
+                please click this icon ⋮ and click the view with fullscreen
+                option to get fullscreen, or type s that will also work.</p>
+                <script>
+                    function revealmessage(){
+    document.getElementById("hiddenmessage").style.display = 'block';
+}
+
+                </script>
+        </html>
