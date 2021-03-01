@@ -1,92 +1,99 @@
-.start{
-    background-color:rgba(0, 217, 255, 0.219);
-    font-size: 20px;
-    font-family: monospace;
-    border: 2px solid rgb(255, 255, 255);
-    border-top-left-radius: 30%;
-    border-bottom-right-radius: 30%;
-    border-bottom-left-radius: 3%;
-    border-top-right-radius: 3%;
-    border-top:10px ;
-    border-bottom:10px ;
-    border-left:10px ;
-    border-right:10px ;
-    padding-top: 20PX;
-    padding-bottom: 20PX;
-    padding-right: 20px;
-    padding-left:20px;
-    word-spacing: 1mm;
-    margin-left: 640px;
-    
-   
-}
-  body{
-    background-image: url(https://miro.medium.com/max/1078/1*6mTWStwUCx8jJ-I7ZyB2tg.png);
-    background-size:cover;
-    margin-left:10PX;
-    background-color: rgb(255, 255, 255);
 
-   
-  }  
-    
+    *, *::before, *::after {
+        box-sizing: border-box;
+        font-family:sans-serif;
+        font-weight: normal;
+      }
+      
+      body {
+        padding: 0;
+        margin: 0;
+        background: linear-gradient(to right, rgb(0, 217, 255),rgb(182, 234, 243));
+        made by shababd4d4
+      }
+      
+      .calculator-grid {
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        min-height: 100vh;
+        grid-template-columns: repeat(4, 100px);
+        grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+      }
+      
+      .calculator-grid > button {
+        cursor: pointer;
+        font-size: 2rem;
+        border: 1px solid rgb(0, 255, 213);
+        outline: none;
+        background-color:rgba(255, 255, 255, .75) ;
+      }
+      
+      .calculator-grid > button:hover {
+        background-color:rgb(0, 255, 200);
+      }
+      
+      .span-two {
+        grid-column: span 2;
+      }
+      
+      .output {
+        grid-column: 1 / -1;
+        background-color:rgb(37, 3, 38);
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-around;
+        flex-direction: column;
+        padding: 10px;
+        word-wrap: break-word;
+        word-break: break-all;
+       
+      }
+      
+      .output .previous-operand {
+        color: rgb(255, 253, 253);
+        font-size: 1.5rem;
+      }
+      
+      .output .current-operand {
+        color:rgb(255, 255, 255);
+        font-size: 2.5rem;
 
-.start2{
-    background-color: rgba(0, 217, 255, 0.267);
-    font-size: 20px;
-    font-family: monospace;
-    border: 2px solid rgb(255, 255, 255);
-    border-radius: 3%;
-    border-top:10px ;
-    border-bottom:10px ;
-    border-left:10px ;
-    border-right:10px ;
-    padding-top: 20PX;
-    padding-bottom: 20PX;
-    padding-right: 20px;
-    padding-left: 20px;
-    margin-left: 750px;
-    margin-bottom: -50px;
-    margin-top: -63px;
-}
-.start2:hover{
-    background-color: rgb(0, 238, 255);
-}
-.start:hover{
-    background-color: rgb(0, 238, 255);
-}
+      }
+      
 
-body:hover{
-background-color: rgb(241, 254, 255);
-}
-
-.note{
-  font-size: 20px;
-  font-family: monospace;
-  margin-top:-65px;
-  margin-bottom:-30px ;
-  width: px;
-  height:65px;
-  background-color:rgba(0, 217, 255, 0.219);
-  border: 2px solid rgb(255, 255, 255);
-    border-radius: 3%;
-    border-top:10px ;
-    border-bottom:10px ;
-    border-left:10px ;
-    border-right:10px ;
-    border-top-left-radius: 30%;
-    border-bottom-right-radius: 30%;
-    border-bottom-left-radius: 3%;
-    border-top-right-radius: 3%;
-    font-size: 23px;
-    color:rgb(12, 12, 12)
-    
-    
-   
-}
-#hiddenmessage{
-  color:rgb(0, 255, 213);
-  font-family: monospace;
-}
-.note:hover{
-  background-color: rgb(0, 238, 255);
-}
+      .btn{
+        background-color: rgb(255, 255, 255);
+        font-size:large;
+        cursor: pointer;
+        font-size: 2rem;
+        border: 1px solid rgb(0, 255, 242);
+        outline: none;
+        background-color:rgba(255, 255, 255, .75);
+         font-family:monospace;
+         
+      }
+      .btn:hover{
+        background-color:rgb(255, 255, 255);
+      
+      }
+      .output:hover{
+        background-color:rgba(0, 0, 0, 0.75);
+      }
+      .span1{
+        span: 2;
+      }
+      .github{
+        background-color: rgb(255, 255, 255);
+        font-size:small;
+        cursor: pointer;
+        font-size: 2rem;
+        border: 1px solid rgb(0, 255, 242);
+        outline: none;
+        background-color:rgba(0, 0, 0, .75);
+         font-family:monospace;
+         span:1;
+         left:20%
+      }
+      
+      }
